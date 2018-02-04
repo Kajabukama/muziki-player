@@ -13,7 +13,6 @@
     },
     "build": {
         "appId": "com.kajabukama.io",
-        "category": "Music",
         "dmg": {
             "contents": [
                 {
