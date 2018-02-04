@@ -1,0 +1,71 @@
+{
+    "name": "muziki",
+    "version": "0.0.1",
+    "license": "MIT",
+    "description": "A music Player build using Web Technologies.",
+    "author": "Yusuph H. Kajabukama <kajabukama@gmail.com>",
+    "main": "main.js",
+    "scripts": {
+        "postinstall": "install-app-deps",
+        "start": "electron .",
+        "pack": "build --dir",
+        "dist": "build"
+    },
+    "build": {
+        "appId": "com.kajabukama.io",
+        "category": "Music",
+        "dmg": {
+            "contents": [
+                {
+                    "x": 110,
+                    "y": 150
+                },
+                {
+                    "x": 240,
+                    "y": 150,
+                    "type": "link",
+                    "path": "/Applications"
+                }
+            ]
+        },
+        "linux": {
+            "target": [
+                "AppImage",
+                "deb"
+            ]
+        },
+        "win": {
+            "target": "squirrel",
+            "icon": "build/icon.ico"
+        }
+    },
+    "dependencies": {
+        "angular": "^1.6.7",
+        "angular-route": "^1.6.9",
+        "howler": "^2.0.8",
+        "i": "^0.3.6",
+        "jquery": "^3.3.1",
+        "malihu-custom-scrollbar-plugin": "^3.1.5",
+        "ng-scrollbars": "0.0.11",
+        "npm": "^5.6.0",
+        "semantic-ui": "^2.2.14",
+        "siriwavejs": "^2.0.2"
+    },
+    "devDependencies": {
+        "electron": "~1.7.8",
+        "electron-builder": "^19.55.3"
+    },
+    "keywords": [
+        "Electron",
+        "Howler",
+        "Music"
+    ],
+    "bugs": {
+        "url": "https://github.com/kajabukama/muzik-player/issues"
+    },
+    "homepage": "https://github.com/kajabukama/muzik-player#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kajabukama/muzik-player.git"
+    }
+}

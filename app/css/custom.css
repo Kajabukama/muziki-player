@@ -1,0 +1,186 @@
+@import './reset.css';
+@import './menu.css';
+@import './ionicons.css';
+body{
+    background-color: #1e272e;
+    color: #fff;
+    font-family: 'Brandon Grotesque', 'Helvetica Neue', Arial, Helvetica, sans-serif !important;
+    font-size: 18px;
+}
+h1,h2,h3,h4{
+    font-family: 'Brandon Grotesque';
+}
+
+.progress{
+    margin-top: 6px;
+    border-radius:6px !important;
+}
+.bar{
+    background-color:#1e272e !important;
+    border-radius:6px !important;
+    min-width: 0em !important;
+}
+.timer{
+    align-content: space-around;
+    height: 50px!important;
+}
+.app-icon{
+    font-size: 2.5em !important;
+}
+.push-50{
+    padding-top: 80px !important;
+}
+.now-playing{
+    margin-bottom: 5px;
+    height: 130px;
+}
+.now-playing .now-playing-element{
+    text-align: center;
+    color: rgba(11, 232, 129,1.0);
+}
+.now-playing .now-playing-element h1{
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: -1px;
+    color: rgba(210, 218, 226,1.0);
+}
+.timer{
+    height: 100%;
+    vertical-align:top;
+}
+.top-section{
+    height: calc(820px - 400px);
+    align-items: center;
+    text-align: center;
+}
+.top-section h1{
+    font-weight: 400;
+    font-size: 2em;
+    color: rgba(11, 232, 129,0.8);
+}
+.bottom-section{
+    height: 180px;
+}
+
+.controlsOuter{
+    background-color: rgba(11, 232, 129,1.0);
+    border-radius: 6px;
+    padding: 1.0em 2.2em;
+    width: 100%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.bottom-controls{
+    margin-top: 10px;
+    padding-bottom: 0.5em;
+}
+.button{
+    background-color: transparent !important;
+    color: white !important;
+
+}
+.input{
+    font-family: 'Brandon Grotesque' !important;
+    border-radius: 20px !important;
+}
+.menu{
+    background-color: transparent;
+    border: none !important;
+    border-radius: 5px !important;
+}
+.playlist-container{
+
+}
+.playlist-container .songs-container{
+    padding-bottom: 3em;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.playlist-container input{
+    font-family: 'Brandon Grotesque' !important;
+    font-size: 1.1em;
+    border-radius: 1.5em !important;
+    padding: 0.6em 1.4em !important;
+    border: 1px solid #485460 !important;
+    transition: all ease-in-out .3s;
+}
+.playlist-container input:focus{
+    border: 1px solid #485460 !important;
+    transition: all ease-in-out .3s;
+}
+.playlist-container .menu{
+    border: none !important;
+    border-radius: 5px !important;
+    background-color: rgba(47, 54, 64,1.0)!important;
+}
+.playlist-container .playlist {
+    padding: 10px 0px;
+    border-radius: 5px;
+    width: auto;
+    min-width: 300px;
+    height: 500px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    transition: all ease-in-out .3s;
+}
+
+.playlist-container .menu .item-search{
+    font-size: 1em !important;
+    padding: .8em .9em .9em;
+}
+
+.playlist-container .menu .item-search i{
+    color: rgba(11, 232, 129,1.0);
+}
+.playlist-container .menu .item{
+    font-size: 1em !important;
+    border-bottom: 1px solid rgba(30, 39, 46,0.5);
+    color: #0be881 !important;
+    padding: .6em 1em;
+}
+
+.playlist .item{
+    color: rgba(30, 39, 46,1.0);
+    display: block;
+    padding:4px 3px;
+}
+.ui.modal{
+    color: #fff !important;
+    font-size: 1.3rem !important;
+    font-family: 'Brandon Grotesque'!important;
+    background-color: #1e272e !important;
+}
+.ui .header{
+    color: #ffffff !important;
+    font-family: 'Brandon Grotesque'!important;
+}
+.ui.modal > .header{
+    color: #0be881 !important;
+    text-align: center !important;
+    font-family: 'Brandon Grotesque'!important;
+    background: transparent !important;
+    border-bottom: 1px solid rgba(34, 36, 38, 0.0) !important;
+    padding: 1.0rem 1.5rem !important;
+}
+.ui.modal > .content {
+    color: #fff !important;
+    background: transparent !important;
+}
+.ui.modal > .actions {
+  background: transparent !important;
+  border-top: 1px solid rgba(34, 36, 38, 0.0) !important;
+}
+
+.ui .mini{
+    width: 25% !important;
+}
+
+.ui.modal > .close {
+  top: 0.3rem;
+  right: 0.5rem;
+  opacity: 0.8;
+  font-size: 1.25em;
+  color: #FFFFFF;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0.625rem 0rem 0rem 0rem;
+}

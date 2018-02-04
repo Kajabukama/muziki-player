@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Player">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title id="title">Muzik</title>
+    <link rel="stylesheet" href="./../node_modules/semantic-ui/dist/semantic.min.css">
+    <link rel="stylesheet" href="./../node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="./css/custom.css">
+</head>
+<body>
+
+    <div id="container">
+        <nav>
+            <div id="menu-title">
+                <div id="menu" class="">
+                    <div class="ui dropdown">
+                        <span id="show-menu"><i class="sidebar icon"></i></span>
+                        <div class="menu">
+                            <div class="item"><i class="file text icon"></i>Open File</div>
+                            <div class="item" id="openFolderBtn"><i class="folder open icon"></i>Open Folder</div>
+                            <div class="divider"></div>
+                            <div class="item"><i class="ion-android-done-all icon"></i>Create Playlist</div>
+                            <div class="item"><i class="ion-ios-gear icon"></i>Settings</div>
+                            <div class="divider"></div>
+                            <div class="item"><i class="ion-umbrella icon"></i>Support</div>
+                            <div class="item" id="infoAboutBtn"><i class="ion-ios-help icon"></i>About</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="titleShown"></div>
+            </div>
+
+            <div id="buttons">
+                <div id="minimize" class="minimize"><span><i class="window minimize icon"></i></span></div>
+                <div id="maximize" class="maximize"><span><i class="plus icon"></i></span></div>
+                <div id="close" class="close"><span><i class="remove icon"></i></span></div>
+            </div>
+
+        </nav>
+    </div>
+    <div class="ui grid" ng-view></div>
+
+    <div class="ui small modal" id="about">
+        <!-- <i class="close icon"></i> -->
+        <div class="header">Muzik Player</div>
+        <div class="content">
+            <div class="description">
+                <h3>About</h3>
+                <p>Muzik Player is an app written by using web technologies, javascript is at the core of this application. In conjuction with HTML5 and css3, Muzik Player gives you the feel and taste of Interactive UI.</p>
+                <p>Written and maintained by Yusuph H. Kajabukama, an experience Fullstack Developer, Javascript Evangelist and Data Scientist based in Dar es salaam. </p>
+            </div>
+        </div>
+        <div class="actions">
+            <div class="ui positive right labeled icon button">Yep, that's me
+                <i class="checkmark icon"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui mini modal" id="maximizeInfo">
+        <!-- <i class="close icon"></i> -->
+        <div class="header">Information</div>
+        <div class="scrolling content">
+            <div class="description">
+                <p>Sorry you cannot maximize the window, Maximizing this window is currently disabled in this version.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script>window.$ = window.jQuery = require('./../node_modules/jquery/dist/jquery.min.js');</script>
+    <script src="./../node_modules/angular/angular.min.js"></script>
+    <script src="./../node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="./../node_modules/ng-scrollbars/dist/scrollbars.min.js"></script>
+
+    <script src="./../node_modules/semantic-ui/dist/semantic.min.js"></script>
+
+    <!-- <script src="./bower_components/angular/angular.min.js"></script> -->
+    <script src="./../node_modules/angular-route/angular-route.min.js"></script>
+    <script src="./../node_modules/howler/dist/howler.min.js"></script>
+    <script src="./../node_modules/siriwavejs/siriwave.js"></script>
+
+    <script src="./app.js"></script>
+    <script src="./views/player/player.js"></script>
+    <script>require('./js/index.js');</script>
+
+
+</body>
+</html>

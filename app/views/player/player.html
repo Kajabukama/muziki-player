@@ -1,0 +1,106 @@
+<div class="ui column container fluid push-50">
+    <div class="row" >
+        <div class="ui sixteen column">
+            <div class="now-playing">
+                <div class="now-playing-element" ng-show="songPlaying">
+                    <i class="huge unmute icon"></i><h1>Now playing</h1>
+                </div>
+            </div>
+            <div class="top-section">
+                <h1>{{ trackName }}</h1>
+                <div class="" id="waveform" ng-show="songPlaying"></div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="bottom-section">
+            <div class="ui column grid">
+                <div class="two wide column"></div>
+                <div class="twelve wide column">
+                      <div class="controlsOuter">
+                          <!-- start top controls section -->
+                          <div class="top-controls">
+                              <div class="ui column grid">
+                                  <div class="one wide middle aligned column">
+                                      <div class="timer" id="timer">0:00</div>
+                                  </div>
+                                  <div class="fourteen wide column">
+                                      <div class="timer" style="padding-top:6px;">
+                                          <div class="ui small progress">
+                                              <div id="progress" class="bar" ng-click="seekToTime($event)"></div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="one wide column">
+                                        <div class="timer" id="duration">{{ timer }}</div>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- end of top controls section -->
+
+                          <!-- start bottom controls section -->
+                          <div class="bottom-controls">
+                              <div class="ui column grid">
+                                  <div class="two wide column">
+                                      <div class="playlist-container">
+                                          <div class="ui dropdown list-menu">
+                                              <span id="list-menu"><i class="large ion-filing icon"></i></span>
+                                              <div class="menu">
+                                                  <div class="playlist">
+                                                      <div class="item-search">
+                                                          <div class="ui icon input fluid">
+                                                              <input type="text" name="query" ng-model="query" placeholder="Search song">
+                                                              <i class="search icon"></i>
+                                                          </div>
+                                                      </div>
+                                                      <div class="divider"></div>
+                                                      <div class="scrolling content">
+                                                          <div class="item" ng-repeat="song in player.playlist | filter: query" ng-click="playPlaylistSong($index)">
+                                                              {{song.name}}
+                                                              <span class="description right floated">
+                                                                  <i class="ion-ios-musical-notes icon"></i>
+                                                              </span>
+                                                          </div>
+                                                      </div>
+
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="thirteen wide center aligned column">
+                                      <div class="ui centered grid">
+                                          <button class="ui icon button" id="prevBtn" ng-click="prevSong()">
+                                              <i class="big step backward icon"></i>
+                                          </button>
+
+                                          <button class="ui icon button"  id="playBtn" ng-show="!songPlaying" ng-click="playMusic()">
+                                              <i class="huge video play icon"></i>
+                                          </button>
+                                          <button class="ui icon button"  id="pauseBtn" ng-show="songPlaying" ng-click="playMusic()">
+                                              <i class="huge stop circle outline icon"></i>
+                                          </button>
+
+                                          <button class="ui icon button" id="nextBtn" ng-click="nextSong()">
+                                              <i class="big step forward icon"></i>
+                                          </button>
+                                      </div>
+
+                                  </div>
+
+                                  <div class="one wide right aligned column">
+                                      <button class="circular ui icon button">
+                                          <span style="float:right;"><i class="large setting icon"></i></span>
+                                      </button>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- end of bottom controls section -->
+                      </div>
+                </div>
+                <div class="two wide column"></div>
+            </div>
+        </div>
+    </div>
+</div>
