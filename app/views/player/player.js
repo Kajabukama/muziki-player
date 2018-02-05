@@ -1,8 +1,7 @@
+const ipc = require('electron').ipcRenderer;
+const path = require('path');
+
 var app = angular.module('Player.player', ['ngRoute']);
-// app.config(['$routeProvider', function ($routeProvider) {
-//     $routeProvider
-//
-// }])
 
 app.controller('PlayerController', ['$scope','$location', function ($scope, $location){
 
@@ -19,9 +18,6 @@ app.controller('PlayerController', ['$scope','$location', function ($scope, $loc
     $scope.playListVisible = false;
     $scope.wave = null;
     $scope.songList = [];
-
-    const ipc = require('electron').ipcRenderer;
-    const path = require('path');
 
     ipc.on('modal-file-content', function (event, arg){
 

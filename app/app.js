@@ -10,6 +10,10 @@ app.config(['$routeProvider', function ($routeProvider) {
             templateUrl: './views/about/about.html',
             controller: 'AboutController'
         })
+        .when('/settings', {
+            templateUrl: './views/settings/settings.html',
+            controller: 'SettingsController'
+        })
         .when('/player', {
             templateUrl: './views/player/player.html',
             controller: 'PlayerController'
