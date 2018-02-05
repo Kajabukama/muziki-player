@@ -10,8 +10,8 @@ var app = angular.module('Player', [
 app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
         .when('/', {
-            templateUrl: './views/home/home.html',
-            controller: 'HomeController'
+            templateUrl: './views/player/player.html',
+            controller: 'PlayerController'
         })
         .when('/about', {
             templateUrl: './views/about/about.html',
@@ -21,9 +21,9 @@ app.config(['$routeProvider', function ($routeProvider) {
             templateUrl: './views/settings/settings.html',
             controller: 'SettingsController'
         })
-        .when('/player', {
-            templateUrl: './views/player/player.html',
-            controller: 'PlayerController'
+        .when('/home', {
+            templateUrl: './views/home/home.html',
+            controller: 'HomeController'
         })
         .otherwise({redirectTo: '/'});
 }])

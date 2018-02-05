@@ -22,6 +22,7 @@ app.controller('PlayerController', ['$scope','$location', function ($scope, $loc
     ipc.on('modal-file-content', function (event, arg){
 
         console.log(arg.path);
+
         $scope.songList = arg.files;
 
         var songsArrayForPlaying = [];
@@ -44,8 +45,8 @@ app.controller('PlayerController', ['$scope','$location', function ($scope, $loc
             width: window.innerWidth,
             height: window.innerHeight * 0.5,
             cover: true,
-            speed: 0.03,
-            amplitude: 0.7,
+            speed: 0.06,
+            amplitude: 0.9,
             frequency: 2,
             color: '#0be881'
         });
@@ -195,14 +196,4 @@ app.controller('PlayerController', ['$scope','$location', function ($scope, $loc
         }
     }
 
-}]);
-
-app.controller('HomeController', ['$scope','$location', function () {
-    console.log('Home controller loaded');
-}]);
-
-app.controller('AboutController', ['$scope','$location', function () {
-    if (status === true) {
-        alert('trying')
-    }
 }]);

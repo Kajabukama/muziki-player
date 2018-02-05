@@ -38,7 +38,7 @@ h1,h2,h3,h4{
 }
 .now-playing{
     margin-bottom: 5px;
-    height: 130px;
+    height: 120px;
 }
 .now-playing .now-playing-element{
     text-align: center;
@@ -55,7 +55,7 @@ h1,h2,h3,h4{
     vertical-align:top;
 }
 .top-section{
-    height: calc(820px - 400px);
+    height: calc(820px - 450px);
     align-items: center;
     text-align: center;
 }
@@ -65,13 +65,13 @@ h1,h2,h3,h4{
     color: rgba(11, 232, 129,0.8);
 }
 .bottom-section{
-    height: 180px;
+    height: 160px;
 }
 
 .controlsOuter{
     background-color: rgba(11, 232, 129,1.0);
     border-radius: 6px;
-    padding: 1.0em 2.2em;
+    padding: 0.4em 2.2em;
     width: 100%;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
