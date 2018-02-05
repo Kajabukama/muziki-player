@@ -1,4 +1,11 @@
-var app = angular.module('Player', ['ngRoute','ngAnimate','Player.player']);
+var app = angular.module('Player', [
+    'ngRoute',
+    'ngAnimate',
+    'Player.home',
+    'Player.about',
+    'Player.settings',
+    'Player.player',
+]);
 
 app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
