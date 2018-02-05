@@ -52,6 +52,7 @@
     -webkit-app-region: no-drag;
 }
 #buttons #minimize, #buttons #maximize, #buttons #close{
+    font-size: 16px;
     width: 60px;
     height: 100%;
     float: left;

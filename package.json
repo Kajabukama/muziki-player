@@ -34,12 +34,20 @@
             ]
         },
         "win": {
-            "target": "squirrel",
-            "icon": "build/icon.ico"
+            "target": [
+                {
+                    "target": "nsis",
+                    "arch": [
+                        "x64",
+                        "ia32"
+                    ]
+                }
+            ]
         }
     },
     "dependencies": {
         "angular": "^1.6.7",
+        "angular-animate": "^1.6.9",
         "angular-route": "^1.6.9",
         "howler": "^2.0.8",
         "i": "^0.3.6",
@@ -52,7 +60,8 @@
     },
     "devDependencies": {
         "electron": "~1.7.8",
-        "electron-builder": "^19.55.3"
+        "electron-builder": "^19.55.3",
+        "electron-builder-squirrel-windows": "^20.0.0"
     },
     "keywords": [
         "Electron",

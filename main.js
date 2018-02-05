@@ -22,7 +22,7 @@ function createWindow () {
         slashes: true
     }))
 
-    // win.webContents.openDevTools({detach: true})
+    win.webContents.openDevTools({detach: true})
     win.on('closed', () => {
         win = null
     })

@@ -1,13 +1,16 @@
 var app = angular.module('Player.player', ['ngRoute']);
-app.config(['$routeProvider', function ($routeProvider) {
-    $routeProvider
-        .when('/player', {
-            templateUrl: './views/player/player.html',
-            controller: 'PlayerController'
-        })
-}])
+// app.config(['$routeProvider', function ($routeProvider) {
+//     $routeProvider
+//
+// }])
 
 app.controller('PlayerController', ['$scope','$location', function ($scope, $location){
+
+    $('.button').popup({
+        inline     : false,
+        hoverable  : true,
+        position   : 'top center'
+    });
 
     console.log('Player Controller loaded');
     $scope.selectedMusic = false;
@@ -196,4 +199,14 @@ app.controller('PlayerController', ['$scope','$location', function ($scope, $loc
         }
     }
 
+}]);
+
+app.controller('HomeController', ['$scope','$location', function () {
+    console.log('Home controller loaded');
+}]);
+
+app.controller('AboutController', ['$scope','$location', function () {
+    if (status === true) {
+        alert('trying')
+    }
 }]);

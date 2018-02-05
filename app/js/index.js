@@ -7,17 +7,16 @@ var minimize = document.getElementById('minimize');
 var close = document.getElementById('close');
 var maximize = document.getElementById('maximize');
 
-var infoAbout = document.getElementById('infoAboutBtn');
 var openFolder = document.getElementById('openFolderBtn');
 var showMenu =  document.getElementById('show-menu');
+var closeApp =  document.getElementById('exit-btn');
+
 
 document.getElementById('titleShown').innerHTML = title;
 
-infoAbout.addEventListener('click', function () {
-    $('#about').modal({
-        blurring: false
-    }).modal('show');
-})
+closeApp.addEventListener('click', function (){
+    win.close();
+});
 
 showMenu.addEventListener('click', function (){
     $('.ui.dropdown').dropdown();
